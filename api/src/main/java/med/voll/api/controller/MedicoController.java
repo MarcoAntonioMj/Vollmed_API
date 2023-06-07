@@ -11,6 +11,10 @@ import jakarta.validation.Valid;
 import med.voll.api.medico.DadosCadastroMedico;
 import med.voll.api.medico.Medico;
 import med.voll.api.medico.MedicoRepository;
+import java.util.List;
+import java.util.ArrayList;
+
+
 
 @RestController
 @RequestMapping("medicos")
@@ -26,4 +30,7 @@ public class MedicoController {
         // Imprime os dados recebidos no console
       repository.save(new Medico(dados));
     }
+   public List<Medico> listar(){
+    
+   }
 }
