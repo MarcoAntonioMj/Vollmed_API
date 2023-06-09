@@ -29,10 +29,11 @@ A Vollmed_API oferece os seguintes endpoints para o cadastro de pacientes e méd
 
 # Pacientes
 - POST /pacientes: Cadastra um novo paciente no sistema. Os dados do paciente devem ser fornecidos no corpo da requisição no formato JSON.
+- GET /pacientes: Retorna a lista de todos os pacientes cadastrados no sistema.
 
 # Médicos
 - POST /medicos: Cadastra um novo médico no sistema. Os dados do médico devem ser fornecidos no corpo da requisição no formato JSON.
-
+- GET /medicos: Retorna a lista de todos os médicos cadastrados no sistema.
 # Contribuição
 Contribuições são bem-vindas! Se você deseja contribuir para o projeto Vollmed_API, siga as etapas abaixo:
 
@@ -46,4 +47,4 @@ Contribuições são bem-vindas! Se você deseja contribuir para o projeto Vollm
 Este projeto é licenciado sob os termos da licença MIT. Consulte o arquivo LICENSE para mais informações.
 
 # Contato
-Se você tiver alguma dúvida ou sugestão em relação ao projeto Vollmed_API, sinta-se à vontade para entrar em contato conosco em marcotonho38@gmail.com.
+Se você tiver alguma dúvida ou sugestão em relação ao projeto Vollmed_API, sinta-se à vontade para entrar em contato comigo em marcotonho38@gmail.com.
