@@ -21,41 +21,39 @@ import med.voll.api.medico.DadosListagemMedico;
 import med.voll.api.medico.Medico;
 import med.voll.api.medico.MedicoRepository;
 
-
-
 @RestController
 @RequestMapping("medicos")
 public class MedicoController {
 
-    @Autowired
-    private MedicoRepository repository;
+  @Autowired
+  private MedicoRepository repository;
 
-    // Mapeia a rota POST "/medicos"
-    @PostMapping
-    @Transactional
-    public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados) {
-        // Imprime os dados recebidos no console
-      repository.save(new Medico(dados));
-    }
-
-    @GetMapping
-    public Page<DadosListagemMedico> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
-      return repository.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
+  // Mapeia a rota POST "/medicos"
+  @PostMapping
+  @Transactional
+  public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados) {
+    // Imprime os dados recebidos no console
+    repository.save(new Medico(dados));
   }
-   @PutMapping
-   @Transactional
-   public void atualizar(@RequestBody @Valid DadosAtualizacaoMedico dados){
+
+  @GetMapping
+  public Page<DadosListagemMedico> listar(@PageableDefault(size = 10, sort = { "nome" }) Pageable paginacao) {
+    return repository.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
+  }
+
+  @PutMapping
+  @Transactional
+  public void atualizar(@RequestBody @Valid DadosAtualizacaoMedico dados) {
     var medico = repository.getReferenceById(dados.id());
     medico.atualizaInformacoes(dados);
 
+  }
 
-   }
-   @DeleteMapping("/{id}")
-   @Transactional
-   public void excluir(@PathVariable long id){
+  @DeleteMapping("/{id}")
+  @Transactional
+  public void excluir(@PathVariable long id) {
     var medico = repository.getReferenceById(id);
-     medico.excluir();
-   }
+    medico.excluir();
+  }
 
- 
 }
