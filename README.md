@@ -30,10 +30,15 @@ A Vollmed_API oferece os seguintes endpoints para o cadastro de pacientes e méd
 # Pacientes
 - POST /pacientes: Cadastra um novo paciente no sistema. Os dados do paciente devem ser fornecidos no corpo da requisição no formato JSON.
 - GET /pacientes: Retorna a lista de todos os pacientes cadastrados no sistema.
+- PUT `/pacientes/{id}`: Atualiza as informações de um paciente existente. Os dados atualizados do paciente devem ser fornecidos no corpo da requisição no formato JSON.
+- DELETE `/pacientes/{id}`: Exclui um paciente do sistema com base no seu ID.
+
 
 # Médicos
 - POST /medicos: Cadastra um novo médico no sistema. Os dados do médico devem ser fornecidos no corpo da requisição no formato JSON.
 - GET /medicos: Retorna a lista de todos os médicos cadastrados no sistema.
+- PUT `/medicos/{id}`: Atualiza as informações de um médico existente. Os dados atualizados do médico devem ser fornecidos no corpo da requisição no formato JSON.
+- DELETE `/medicos/{id}`: Exclui um médico do sistema com base no seu ID.
 # Contribuição
 Contribuições são bem-vindas! Se você deseja contribuir para o projeto Vollmed_API, siga as etapas abaixo:
 
