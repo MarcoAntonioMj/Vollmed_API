@@ -1,4 +1,14 @@
 # Vollmed_API
+<p align="center">
+  <a href="#">
+    <img src="Pdfs\Vollmed_API.png" width="300" alt="">
+  </a>
+</p>
+
+
+
+
+
 Vollmed_API é uma aplicação Java que implementa um sistema de cadastro de pacientes e médicos. Utiliza o framework Spring para o desenvolvimento do backend.
 
 # Requisitos
